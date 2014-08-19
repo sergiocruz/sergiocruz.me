@@ -1,0 +1,207 @@
+/**
+ * Variables
+ */
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+$brand-primary: #ffc107;
+$brand-success: #e91e63;
+$jumbotron-bg: $brand-primary;
+$font-family-sans-serif: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$font-size-base: 16px;
+$footer-bg: #00b8d4;
+@import "bootstrap/bootstrap";
+
+/**
+ * Font Awesome
+ */
+$fa-font-path: "/bower_components/font-awesome/fonts";
+@import "font-awesome/scss/font-awesome.scss";
+
+/**
+ * Mixins
+ */
+@mixin blur($pixels) {
+  -webkit-filter: blur($pixels);
+  -moz-filter: blur($pixels);
+  -o-filter: blur($pixels);
+  -ms-filter: blur($pixels);
+  filter: blur($pixels);
+}
+
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+
+/**
+ * Styles
+ */
+
+.btn-transparent-white {
+  @include button-variant(white, transparent, white);
+}
+
+.btn-transparent-gray {
+  @include button-variant($gray-dark, transparent, $gray-dark);
+}
+ 
+* {
+  outline: none !important;
+}
+
+body, html {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  height: 100%;
+  min-height: 100%;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  font-weight: 300;
+}
+
+.container {
+  max-height: 1200px;
+  min-height: 400px;
+  padding-bottom: $jumbotron-padding;
+
+  .row {
+    section {
+      @extend .col-md-4;
+    }
+  }
+}
+
+/* Custom page footer */
+footer {
+  background-color: $footer-bg;
+  border-top: 1px solid #e5e5e5;
+  color: white;
+  padding: 20px 0 15px;
+  text-align: center; 
+
+  a {
+    color: white;
+    font-size: $font-size-h3;
+    margin: 0 10px;
+    text-decoration: none;
+
+    &:hover {
+      color: inherit;
+    }
+  }
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  border-bottom: 1px solid #e5e5e5;
+  color: $gray-dark;
+  cursor: default;
+  position: relative;
+  text-align: center;
+  // background-image: url(../images/bg-serg.jpg);
+  // background-position: 50%;
+  background-size: cover;
+  min-height: 100%;
+  // height: 100%;
+
+  // text-shadow: 1px 1px 1px black;
+
+  @media screen and (max-width: $screen-xs-max) {
+    border-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .bg {
+    // background-color: rgba(0, 0, 0, .5);
+    // background-image: url(../images/pattern.png);
+    // background-position: 50% 88%;
+    // background-size: cover;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    @include transition(2sec);
+
+    @media screen and (max-width: $screen-xs-max) {
+      @include blur(3px);
+    }
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .btn {
+    // Mobile phones
+    @media screen and (max-width: $screen-xs-max) {
+      font-size: $font-size-small;
+      padding: 7px 3px;
+    }
+  
+    // Tablets and up
+    @media screen and (min-width: $screen-md-min) {
+      .fa ~ .fa {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  // .avatar, h1 {
+  //   line-height: 80%;
+  //   display: inline-block;
+  //   vertical-align: middle;
+  //   margin: 0 10px;
+  // }
+
+  h1 {
+    border: 4px solid $gray-dark;
+    font-weight: 400;
+    padding: 30px;
+    text-transform: uppercase;
+    width: 500px;
+    font-size: 60px;
+    line-height: normal;
+    margin: 10px auto 30px;
+    border-radius: $border-radius-large;
+    @include transition(500ms);
+
+    @media screen and (max-width: $screen-xs-max) {
+      width: 260px;
+      font-size: 48px;
+      padding: 20px;
+    }
+
+    small {
+      font-size: 35%;
+      line-height: normal;
+      display: block;
+    }
+  }
+
+  .avatar {
+    background-image: url(../images/sergiocruz.png);
+    background-size: 240px 240px;
+    display: inline-block;
+    height: 240px;
+    width: 240px;
+
+    @media screen and (max-width: $screen-xs-max) {
+      background-size: 120px 120px;
+      height: 120px;
+      width: 120px;
+    }
+  }
+
+  p {
+    margin-top: 5px;
+  }
+}
