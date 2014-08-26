@@ -178,10 +178,10 @@ module.exports = function (grunt) {
           'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js',
           'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js',
           'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js',
-          'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js',
+          // 'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js',
           'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js',
           'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js',
-          'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js',
+          // 'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js',
           'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js'
         ],
       },
@@ -360,7 +360,7 @@ module.exports = function (grunt) {
             '.htaccess',
             '*.html',
             'views/{,*/}*.html',
-            'images/{,*/}*.{webp}',
+            'images/*',
             'fonts/*'
           ]
         }, {
@@ -454,7 +454,7 @@ module.exports = function (grunt) {
     'cdnify',
     'cssmin',
     'uglify',
-    'filerev',
+    // 'filerev',
     'usemin',
     'htmlmin'
   ]);

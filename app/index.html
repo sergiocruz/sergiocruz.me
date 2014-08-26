@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Sergio Cruz</title>
+    <title>Sergio Cruz, Full stack developer</title>
     <meta name="description" content="My passion is to innovate. I love building beautiful and useful products.">
     <meta name="viewport" content="width=device-width">
 
@@ -13,31 +13,49 @@
   <body ng-app="ngApp">
 
     <div class="jumbotron">
-      <div class="bg"></div>
+      <div class="bg">
+        <div sc-video src="images/vid.mp4"></div>
+      </div>
+
       <div class="content">
-        <span class="avatar"></span>
+        <p class="social-media">
+          <a href="https://twitter.com/hashtagserg" target="_blank" title="Twitter" tooltip><i class="fa fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/in/sergiorlcruz" target="_blank" title="LinkedIn" tooltip><i class="fa fa-linkedin"></i></a>
+          <a href="https://www.github.com/sergiocruz" target="_blank" title="GitHub" tooltip><i class="fa fa-github"></i></a>
+          <a href="https://blog.sergiocruz.me" target="_blank" title="Sergio's Blog" tooltip><i class="fa fa-book"></i></a>
+          <a href="mailto:hello@sergiocruz.me" title="Email Sergio" tooltip><i class="fa fa-envelope-square"></i></a>
+        </p>
+        <!-- <span class="avatar"></span> -->
         <h1>Sergio Cruz <small>Full Stack Application Developer</small></h1>
-        <p>
-          <a class="btn btn-lg btn-transparent-gray" target="_blank" href="https://twitter.com/hashtagserg">
+        <!--
+        <p class="social-media">
+          <a class="btn btn-lg btn-transparent-lime" target="_blank" title="LinkedIn" tooltip href="https://twitter.com/hashtagserg">
             <i class="fa fa-twitter"></i>
             Twitter
           </a>
 
-          <a class="btn btn-lg btn-transparent-gray" target="_blank" href="https://www.linkedin.com/in/sergiorlcruz">
+          <a class="btn btn-lg btn-transparent-lime" target="_blank" href="https://www.linkedin.com/in/sergiorlcruz">
             <i class="fa fa-linkedin"></i>
             LinkedIn
           </a>
 
-          <a class="btn btn-lg btn-transparent-gray" target="_blank" href="https://www.github.com/sergiocruz">
+          <a class="btn btn-lg btn-transparent-lime" target="_blank" href="https://www.github.com/sergiocruz">
             <i class="fa fa-github-alt"></i>
             Github
           </a>
 
-          <a class="btn btn-lg btn-transparent-gray" target="_blank" href="https://blog.sergiocruz.me">
+          <a class="btn btn-lg btn-transparent-lime" target="_blank" href="https://blog.sergiocruz.me">
             <i class="fa fa-file-text"></i>
             Blog
           </a>
 
+        </p>
+        -->
+        <p>
+          <a class="btn btn-lg btn-transparent-white" target="_blank" href="images/resume.pdf">
+            <i class="fa fa-download"></i>
+            Download Resume
+          </a>
         </p>
       </div>
     </div>
@@ -48,11 +66,12 @@
 
 
     <footer>
-      <p>
-        <a href="https://twitter.com/hashtagserg" target="_blank"><i class="fa fa-twitter"></i></a>
-        <a href="https://www.linkedin.com/in/sergiorlcruz" target="_blank"><i class="fa fa-linkedin"></i></a>
-        <a href="https://www.github.com/sergiocruz" target="_blank"><i class="fa fa-github"></i></a>
-        <a href="mailto:hello@sergiocruz.me"><i class="fa fa-envelope-square"></i></a>
+      <p class="social-media">
+        <a href="https://twitter.com/hashtagserg" target="_blank" title="Twitter" tooltip><i class="fa fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/sergiorlcruz" target="_blank" title="LinkedIn" tooltip><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.github.com/sergiocruz" target="_blank" title="GitHub" tooltip><i class="fa fa-github"></i></a>
+        <a href="https://blog.sergiocruz.me" target="_blank" title="Sergio's Blog" tooltip><i class="fa fa-book"></i></a>
+        <a href="mailto:hello@sergiocruz.me" title="Email Sergio" tooltip><i class="fa fa-envelope-square"></i></a>
       </p>
     </footer>
 
@@ -79,6 +98,8 @@
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
@@ -91,6 +112,8 @@
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/directives/tooltip.js"></script>
+    <script src="scripts/directives/scvideo.js"></script>
     <!-- endbuild -->
 </body>
 </html>
