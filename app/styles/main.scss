@@ -112,11 +112,11 @@ a {
 }
 
 h2 {
-  text-align: center;
-  position: relative;
   margin: 15px auto 25px;
-  width: auto;
+  position: relative;
   padding: 0 0 20px 0;
+  text-align: center;
+  width: auto;
 
   &:after {
     background: $lime-green;
@@ -127,6 +127,19 @@ h2 {
     margin-left: -20%;
     position: relative;
     width: 80%;
+  }
+}
+
+.standout {
+  text-align: center;
+  background: $brand-success;
+  color: white;
+  padding: 15px;
+  margin: 15px 0 20px;
+
+  @media screen and (min-width: $screen-sm-min) {
+    width: 85%;
+    padding-left: 15%;
   }
 }
 
@@ -336,8 +349,7 @@ header {
       width: 100%;
 
       @media screen and (min-width: $screen-sm-min) {
-        position: relative;
-        top: -120px;
+        margin-top: -120px;
       }
     }
   }
