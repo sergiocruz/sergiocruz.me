@@ -12,12 +12,20 @@
   </head>
   <body ng-app="ngApp">
 
-    <div class="jumbotron">
+    <header>
+
+      <!-- Line -->
+      <div class="line"></div>
+
+      <!-- Background video -->
       <div class="bg">
         <div sc-video src="media/vid.mp4"></div>
       </div>
 
+      <!-- Header content -->
       <div class="content">
+
+        <!-- Social Media -->
         <p class="social-media">
           <a href="https://twitter.com/hashtagserg" target="_blank" title="Twitter" tooltip><i class="fa fa-twitter"></i></a>
           <a href="https://www.linkedin.com/in/sergiorlcruz" target="_blank" title="LinkedIn" tooltip><i class="fa fa-linkedin"></i></a>
@@ -25,44 +33,24 @@
           <a href="https://blog.sergiocruz.me" target="_blank" title="Sergio's Blog" tooltip><i class="fa fa-book"></i></a>
           <a href="mailto:hello@sergiocruz.me" title="Email Sergio" tooltip><i class="fa fa-envelope-square"></i></a>
         </p>
-        <!-- <span class="avatar"></span> -->
+
+        <!-- Title -->
         <h1>Sergio Cruz <small>Full Stack Application Developer</small></h1>
-        <!--
-        <p class="social-media">
-          <a class="btn btn-lg btn-transparent-lime" target="_blank" title="LinkedIn" tooltip href="https://twitter.com/hashtagserg">
-            <i class="fa fa-twitter"></i>
-            Twitter
-          </a>
 
-          <a class="btn btn-lg btn-transparent-lime" target="_blank" href="https://www.linkedin.com/in/sergiorlcruz">
-            <i class="fa fa-linkedin"></i>
-            LinkedIn
-          </a>
-
-          <a class="btn btn-lg btn-transparent-lime" target="_blank" href="https://www.github.com/sergiocruz">
-            <i class="fa fa-github-alt"></i>
-            Github
-          </a>
-
-          <a class="btn btn-lg btn-transparent-lime" target="_blank" href="https://blog.sergiocruz.me">
-            <i class="fa fa-file-text"></i>
-            Blog
-          </a>
-
-        </p>
-        -->
+        <!-- Resume download -->
         <p>
           <a class="btn btn-lg btn-transparent-white" target="_blank" href="images/resume.pdf">
             <i class="fa fa-download"></i>
             Download Resume
           </a>
         </p>
-      </div>
-    </div>
 
-    <div class="container">
-      <div ng-view></div>
-    </div>
+      </div>
+
+      <a href class="go-down" scroll-to scroll-to-target="#nice-to-meet-you"></a>
+    </header>
+
+    <div ng-view></div>
 
 
     <footer>
@@ -116,6 +104,7 @@
     <script src="scripts/directives/tooltip.js"></script>
     <script src="scripts/directives/scvideo.js"></script>
     <script src="scripts/services/browserchecker.js"></script>
+    <script src="scripts/directives/scroll-to.js"></script>
     <!-- endbuild -->
 </body>
 </html>

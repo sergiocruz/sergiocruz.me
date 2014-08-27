@@ -1,23 +1,33 @@
 /**
+ * Google Font
+ */
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+
+/**
  * Variables
  */
 
 // Colors
 $lime-green: #c6ff00;
+$gold-yellow: #ffc107;
 
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
-$brand-primary: #ffc107;
+$brand-primary: $lime-green;
 $brand-success: #e91e63;
-$jumbotron-bg: $brand-primary;
 $font-family-sans-serif: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $font-size-base: 16px;
 $footer-bg: #00b8d4;
 $button-hover-speed: 250ms;
 
+$container-lg: 1400px;
+
 $tooltip-color: #333;
 $tooltip-bg: $lime-green;
 
 @import "bootstrap/bootstrap";
+
+// Title font
+$font-title: 'Lato', sans-serif;
 
 /**
  * Font Awesome
@@ -39,7 +49,7 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
 
   &:hover {
     background-color: white;
-    color: $gray-dark;
+    color: $gray-darker;
   }
 }
 
@@ -83,19 +93,62 @@ body, html {
 }
 
 h1, h2, h3 {
+  font-family: $font-title;
   font-weight: 300;
+  text-transform: uppercase;
+}
+
+.lead {
+  font-family: $font-title;
+  font-weight: 300;
+}
+
+em {
+  font-family: $font-family-serif;
 }
 
 a {
   @include transition($button-hover-speed);
 }
 
+h2 {
+  margin: 15px auto 25px;
+  position: relative;
+  padding: 0 0 20px 0;
+  text-align: center;
+  width: auto;
+
+  &:after {
+    background: $lime-green;
+    bottom: -5px;
+    content: ' ';
+    display: block;
+    height: 4px;
+    margin-left: -20%;
+    position: relative;
+    width: 80%;
+  }
+}
+
+.standout {
+  text-align: center;
+  background: $brand-success;
+  color: white;
+  padding: 15px;
+  margin: 15px 0 20px;
+
+  @media screen and (min-width: $screen-sm-min) {
+    width: 85%;
+    padding-left: 15%;
+  }
+}
+
 .container {
-  max-height: 1200px;
-  min-height: 400px;
   padding-bottom: $jumbotron-padding;
 
-  .row {
+  .articles {
+    @extend .row;
+
     section {
       @extend .col-md-4;
     }
@@ -124,20 +177,66 @@ footer {
   }
 }
 
+.go-down {
+  display: block;
+  background: $gray-darker;
+  background: rgba(0, 0, 0, .7);
+  border-radius: 50%;
+  color: $brand-primary;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 60px;
+  width: 80px;
+  height: 80px;
+  @include transition(500ms);
+  @extend .hidden-xs;
+
+  &:hover {
+    background: rgba(0, 0, 0, .95);
+    color: $brand-primary;
+    padding-top: 2px;
+  }
+
+  &:after {
+    @extend .fa;
+    content: $fa-var-angle-down;
+  }
+}
+
 /* Main marketing message and sign up button */
-.jumbotron {
+header {
+  @extend .jumbotron;
+
   background-color: #000;
   border-bottom: 1px solid #e5e5e5;
   color: white;
   cursor: default;
   height: 101%;
-  margin: 0;
-  min-height: 500px;
+  margin: 0 0 50px 0;
+  min-height: 600px;
   overflow: hidden;
-  padding: 150px 0 0;
+  padding: 180px 0 0;
   position: relative;
   text-align: center;
   @include disable-selection();
+
+  @media screen and (max-width: $screen-xs-max) {
+    border-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 25px;
+    padding-bottom: 10px;
+  }
+
+  > .line {
+    position: absolute;
+    width: 80%;
+    // max-width: 1200px;
+    height: 3px;
+    background: $lime-green;
+    top: 10px;
+    right: 0;
+  }
 
   > .bg {
     background-image: url(../images/bg-serg.jpg);
@@ -168,29 +267,15 @@ footer {
     }
   }
 
-  .content {
+  > .content {
     position: relative;
     z-index: 2;
-  }
-
-  @media screen and (max-width: $screen-xs-max) {
-    border-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
-  .content {
-    position: relative;
-    z-index: 1;
   }
 
   h1 {
     border: 4px solid $lime-green;
     border-radius: $border-radius-large;
     font-size: 60px;
-    font-weight: 400;
     line-height: normal;
     margin: 10px auto 30px;
     padding: 30px;
@@ -205,9 +290,17 @@ footer {
     }
 
     small {
-      font-size: 35%;
-      line-height: normal;
+      color: $gray-lighter;
       display: block;
+      font-size: 35%;
+      font-weight: 100;
+      line-height: normal;
+
+      @media screen and (max-width: $screen-xs-max) {
+        margin-top: 10px;
+        font-size: 40%;
+        font-weight: 300;
+      }
     }
   }
 
@@ -225,7 +318,47 @@ footer {
     }
   }
 
-  p {
-    margin-top: 5px;
+  .go-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    margin-left: -40px;
+    z-index: 3;
+  }
+}
+
+
+.intro {
+  margin-bottom: 40px;
+
+  .row {
+    max-width: $container-lg;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  aside {
+    @extend .col-sm-4;
+    @include disable-selection;
+
+    img {
+      display: block;
+      height: auto;
+      margin: 0 auto;
+      max-width: 480px;
+      width: 100%;
+
+      @media screen and (min-width: $screen-sm-min) {
+        margin-top: -120px;
+      }
+    }
+  }
+
+  section {
+    @extend .col-sm-8;
+
+    p {
+      @extend .lead;
+    }
   }
 }
