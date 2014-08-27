@@ -28,27 +28,7 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
 /**
  * Mixins
  */
-@mixin blur($pixels) {
-  -webkit-filter: blur($pixels);
-  -moz-filter: blur($pixels);
-  -o-filter: blur($pixels);
-  -ms-filter: blur($pixels);
-  filter: blur($pixels);
-}
-
-@mixin transition($transition) {
-  -webkit-transition: $transition;
-  -moz-transition: $transition;
-  -o-transition: $transition;
-  transition: $transition;
-}
-
-@mixin filter($property) {
-  -moz-filter: $property;
-  -webkit-filter: $property;
-  filter: $property;
-}
-
+@import "partials/mixins";
 
 /**
  * Styles
@@ -83,11 +63,22 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
 
 * {
   outline: none !important;
+
+  @include selection {
+    background: $lime-green;
+    color: $gray-dark;
+  }
 }
+
 
 body, html {
   font-family: $font-family-sans-serif;
   font-weight: 300;
+  height: 100%;
+  margin: 0;
+  min-height: 100%;
+  text-rendering: optimizelegibility;
+  -moz-osx-font-smoothing: grayscale;
   padding: 0;
 }
 
@@ -135,20 +126,23 @@ footer {
 
 /* Main marketing message and sign up button */
 .jumbotron {
+  background-color: #000;
   border-bottom: 1px solid #e5e5e5;
   color: white;
   cursor: default;
-  height: 100%;
+  height: 101%;
+  margin: 0;
   min-height: 500px;
-  padding-top: 10%;
+  overflow: hidden;
+  padding: 150px 0 0;
   position: relative;
   text-align: center;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
+  @include disable-selection();
 
   > .bg {
-    background-color: $gray-dark;
     background-image: url(../images/bg-serg.jpg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
     top: 0;
@@ -156,7 +150,11 @@ footer {
     left: 0;
     right: 0;
     z-index: 1;
-    @include filter(brightness(25%));
+    @include opaque(0.2);
+
+    // Can old IE get some love?
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/bg-serg.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/bg-serg.jpg', sizingMethod='scale') progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
 
     > video {
       position: relative;
@@ -166,8 +164,7 @@ footer {
       min-height: 100%;
       width: auto;
       height: auto;
-
-      // @extend .hide-xs;
+      @extend .hidden-xs;
     }
   }
 

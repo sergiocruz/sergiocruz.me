@@ -7,22 +7,23 @@
  * # video
  */
 angular.module('ngApp')
-  .directive('scVideo', function () {
+  .directive('scVideo', function scVideo(BrowserChecker) {
     return {
       scope: {
         src: '@'
       },
-      templateUrl: '/views/directives/scvideo.html',
       restrict: 'A',
       replace: true,
-      link: function postLink() {},
-      compile: function(tElement, tAttrs) {
+      templateUrl: '/views/directives/scvideo.html',
+      link: function link() {},
+      compile: function compile() {
 
-        // TODO: make sure it doesnt render on mobile
-        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-          return false;
+        // Does not compile if is mobile
+        if (BrowserChecker.isMobile()) {
+          this.templateUrl = '';
         }
 
+        // Return linkining method
         return this.link;
       }
     };

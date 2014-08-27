@@ -1,0 +1,48 @@
+@mixin blur($pixels) {
+  -webkit-filter: blur($pixels);
+  -moz-filter: blur($pixels);
+  -o-filter: blur($pixels);
+  -ms-filter: blur($pixels);
+  filter: blur($pixels);
+}
+
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+@mixin filter($property) {
+  -moz-filter: $property;
+  -webkit-filter: $property;
+  filter: $property;
+}
+
+@mixin disable-selection() {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin selection {
+  ::-moz-selection { @content; }
+  ::selection { @content; }
+}
+
+@mixin opaque($opacity) {
+  /* Theoretically for IE 8 & 9 (more valid) */
+  /* ...but not required as filter works too */
+  /* should come BEFORE filter */
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=$opacity*100)"; // IE8
+
+  /* This works in IE 8 & 9 too */
+  /* ... but also 5, 6, 7 */
+  filter: alpha(opacity=$opacity*100); // IE 5-7
+
+  /* Modern Browsers */
+  opacity: $opacity;
+}
