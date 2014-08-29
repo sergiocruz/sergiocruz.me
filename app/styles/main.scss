@@ -71,6 +71,15 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
   }
 }
 
+.btn-link-lime {
+  background-color: $lime-green;
+  color: $gray-darker;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
 * {
   outline: none !important;
 
@@ -136,6 +145,8 @@ h2 {
   color: white;
   padding: 15px;
   margin: 15px 0 20px;
+  font-weight: 100;
+  font-size: 42px;
 
   @media screen and (min-width: $screen-sm-min) {
     width: 85%;
@@ -180,7 +191,7 @@ footer {
 .go-down {
   display: block;
   background: $gray-darker;
-  background: rgba(0, 0, 0, .7);
+  background: rgba(0, 0, 0, .6);
   border-radius: 50%;
   color: $brand-primary;
   margin: 0 auto;
@@ -194,7 +205,6 @@ footer {
   &:hover {
     background: rgba(0, 0, 0, .95);
     color: $brand-primary;
-    padding-top: 2px;
   }
 
   &:after {
@@ -249,7 +259,7 @@ header {
     left: 0;
     right: 0;
     z-index: 1;
-    @include opaque(0.2);
+    @include opaque(0.3);
 
     // Can old IE get some love?
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/bg-serg.jpg', sizingMethod='scale');
@@ -349,7 +359,7 @@ header {
       width: 100%;
 
       @media screen and (min-width: $screen-sm-min) {
-        margin-top: -120px;
+        margin-top: -100px;
       }
     }
   }
