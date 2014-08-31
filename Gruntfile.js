@@ -412,6 +412,15 @@ module.exports = function (grunt) {
         configFile: 'test/karma.conf.js',
         singleRun: true
       }
+    },
+
+    // CSS optimizer
+    uncss: {
+      dist: {
+        files: {
+          'dist/styles/main.css': ['dist/index.html']
+        }
+      }
     }
   });
 
@@ -456,6 +465,7 @@ module.exports = function (grunt) {
     'cdnify',
     'cssmin',
     'uglify',
+    'uncss',
     // 'filerev',
     'usemin',
     'htmlmin'
