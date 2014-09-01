@@ -465,7 +465,7 @@ module.exports = function (grunt) {
     'cdnify',
     'cssmin',
     'uglify',
-    'uncss',
+    // 'uncss',
     // 'filerev',
     'usemin',
     'htmlmin'

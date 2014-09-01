@@ -60,6 +60,7 @@
   }
 
   h5 {
+    font-family: Arial;
     color: $gray-light;
   }
 
@@ -78,6 +79,7 @@
 
     span {
       color: $gray-light;
+      font-family: $font-title;
       margin-left: 10px;
     }
   }
