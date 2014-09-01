@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * @ngdoc function
  * @name ngApp.controller:MainCtrl
@@ -7,6 +5,16 @@
  * # MainCtrl
  * Controller of the ngApp
  */
-angular.module('ngApp')
-  .controller('MainCtrl', function MainCtrl() {
-  });
+(function() {
+
+  'use strict';
+
+  angular.module('ngApp')
+    .controller('MainCtrl', ['$scope', 'parallaxHelper', MainCtrl]);
+
+
+  function MainCtrl($scope, parallaxHelper) {
+    this.background = parallaxHelper.createAnimator(-0.3, 150, -150);
+  }
+
+})();

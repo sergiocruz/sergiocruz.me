@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="ngApp">
+  <body ng-app="ngApp" ng-controller="MainCtrl as m">
 
     <header>
 
@@ -54,61 +54,133 @@
       <a href class="go-down" scroll-to scroll-to-target="#nice-to-meet-you"></a>
     </header>
 
-    <article class="intro">
-      <h2 id="nice-to-meet-you">Hello I'm Sergio, nice to meet you!</h2>
+    <section class="intro">
+      <article>
+        <h2 class="half-border" id="nice-to-meet-you">Hello I'm Sergio, nice to meet you!</h2>
 
-      <div class="row">
-        <aside>
-          <img src="images/serg-profile.png" alt="Sergio Cruz, application developer" class="img-rounded" width="100" height="100">
-        </aside>
-        <section>
-          <p>Thanks for dropping by! I am a software developer who enjoys building meaningful products with powerful cutting edge technologies. I specially love creating user interfaces with optimized user experience (UI/UX) by developing complex client-side applications.</p>
-          <p>
-            My favorite tech stack at the moment includes:
-            <a href="http://yeoman.io/" target="_blank">yeoman</a>,
-            <a href="https://angularjs.org/" target="_blank">angularjs</a>,
-            <a href="http://sass-lang.com/" target="_blank">SASS</a>,
-            <a href="http://sailsjs.org/">sailsjs</a>,
-            <a href="http://www.mongodb.org/" target="_blank">mongo</a> &amp;
-            <a href="http://jasmine.github.io/edge/introduction.html" target="_blank">jasmine</a>.
-            Before JavaScript won me over though, I used to live in the PHP world (I still go back to visit sometimes). Ah the good times I've had with CodeIgniter, Zend, Laravel...
-          </p>
-          <p>
-            Feel free to contact me at any time with questions:<br >
-            <strong>E.</strong> hello [at] sergiocruz.me<br />
-            <strong>P.</strong> (407) six-nine-four 8175
-          </p>
-        </section>
+        <div class="row">
+          <aside>
+            <img src="images/serg-profile.png" alt="Sergio Cruz, application developer" class="img-rounded" width="100" height="100">
+          </aside>
+          <div>
+            <p>Thanks for dropping by! I am a software developer who enjoys building meaningful products with powerful cutting edge technologies. I specially love creating user interfaces with optimized user experience (UI/UX) by developing complex client-side applications.</p>
+            <p>
+              My favorite tech stack at the moment includes:
+              <a href="http://yeoman.io/" target="_blank">yeoman</a>,
+              <a href="https://angularjs.org/" target="_blank">angularjs</a>,
+              <a href="http://sass-lang.com/" target="_blank">SASS</a>,
+              <a href="http://sailsjs.org/">sailsjs</a>,
+              <a href="http://www.mongodb.org/" target="_blank">mongo</a> &amp;
+              <a href="http://jasmine.github.io/edge/introduction.html" target="_blank">jasmine</a>.
+              Before JavaScript won me over though, I used to live in the PHP world (I still go back to visit sometimes). Ah the good times I've had with CodeIgniter, Zend, Laravel...
+            </p>
+            <p>
+              Feel free to contact me at any time with questions:<br >
+              <strong>E.</strong> hello [at] sergiocruz.me<br />
+              <strong>P.</strong> (407) six-nine-four 8175
+            </p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="skills">
+      <img src="images/bg-skills.jpg" alt="" du-parallax y="m.background" opacity="fadeIn" />
+      <div class="container">
+
+        <div class="row">
+          <div class="experience">
+            <h3 class="section-title">Work Experience</h3>
+
+            <div class="position">
+              <h4>GotChosen, Inc <small>July 2014 - Present</small></h4>
+              <h5>Senior UX Engineer</h5>
+              <div class="description">
+                <ul>
+                  <li>Optimized JavaScript code, specially AngularJS</li>
+                  <li>Developed complex client-side applications using MV* Frameworks</li>
+                  <li>Assisted API Team to come up with good RESTful standards</li>
+                  <li>Integrated applications with proprietary RESTful API</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="position">
+              <h4>TravelClick <small>February 2014 - July 2014 (Contract)</small></h4>
+              <h5>Application Developer</h5>
+              <div class="description">
+                <ul>
+                  <li>Optimized JavaScript code, specially AngularJS</li>
+                  <li>Developed complex client-side applications using MV* Frameworks</li>
+                  <li>Assisted API Team to come up with good RESTful standards</li>
+                  <li>Integrated applications with proprietary RESTful API</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="ratings">
+            <h3 class="section-title">Technical Skills</h3>
+            <h4>Languages &amp; DBs</h4>
+            <dl>
+              <dt>JavaScript</dt><dd rating="80"></dd>
+              <dt>PHP</dt><dd rating="75"></dd>
+              <dt>Java</dt><dd rating="60"></dd>
+              <dt>MySQL</dt><dd rating="70"></dd>
+              <dt>MongoDB</dt><dd rating="60"></dd>
+            </dl>
+
+            <h4>Frameworks &amp; Platforms</h4>
+            <dl>
+              <dt>NodeJS</dt><dd rating="70"></dd>
+              <dt>AngularJS</dt><dd rating="80"></dd>
+              <dt>SailsJS</dt><dd rating="90"></dd>
+              <dt>Laravel</dt><dd rating="60"></dd>
+              <dt>Grunt</dt><dd rating="85"></dd>
+              <dt>CodeIgniter</dt><dd rating="95"></dd>
+            </dl>
+
+            <h4>Development Software</h4>
+            <dl>
+              <dt>OS X</dt><dd rating="85"></dd>
+              <dt>Adobe Photoshop</dt><dd rating="65"></dd>
+              <dt>Adobe Fireworks</dt><dd rating="90"></dd>
+              <dt>Sublime Text</dt><dd rating="90"></dd>
+              <dt>Xcode</dt><dd rating="60"></dd>
+              <dt>Eclipse</dt><dd rating="75"></dd>
+            </dl>
+
+          </div>
+        </div>
       </div>
-    </article>
+    </section>
 
-    <h3 class="standout">Current projects</h3>
+    <section class="projects">
+      <h3 class="standout">Current projects</h3>
+      <div class="container">
+        <p class="lead">Come back soon to see some projects I'm working on, portfolio, résumé and rants! Until then, checkout some links:</p>
 
-    <div class="container">
+        <div class="articles">
+          <section>
+            <h3>Coffee Finder</h3>
+            <p>Pebble watchface app, shows you closest coffee shop to your current location.</p>
+            <p><a href="https://apps.getpebble.com/applications/53b0d17bb9bff87a3e000077" class="btn btn-transparent-gray" target="_blank">Check it out</a></p>
+          </section>
 
-      <p class="lead">Come back soon to see some projects I'm working on, portfolio, résumé and rants! Until then, checkout some links:</p>
+          <section>
+            <h3>AngularJS Testing</h3>
+            <p>Blog post describing how to unit test and generate code coverage in AngularJS.</p>
+            <p><a href="https://blog.sergiocruz.me/angularjs-how-to-generate-code-coverage-for-yeoman-scaffolded-apps/" class="btn btn-transparent-gray" target="_blank">Check it out</a></p>
+          </section>
 
-      <div class="articles">
-        <section>
-          <h3>Coffee Finder</h3>
-          <p>Pebble watchface app, shows you closest coffee shop to your current location.</p>
-          <p><a href="https://apps.getpebble.com/applications/53b0d17bb9bff87a3e000077" class="btn btn-transparent-gray" target="_blank">Check it out</a></p>
-        </section>
-
-        <section>
-          <h3>AngularJS Testing</h3>
-          <p>Blog post describing how to unit test and generate code coverage in AngularJS.</p>
-          <p><a href="https://blog.sergiocruz.me/angularjs-how-to-generate-code-coverage-for-yeoman-scaffolded-apps/" class="btn btn-transparent-gray" target="_blank">Check it out</a></p>
-        </section>
-
-        <section>
-          <h3>SailsJS Testing</h3>
-          <p>Unit testing SailsJS for the first time was not easy, so I wrote up a tutorial on it.</p>
-          <p><a href="https://blog.sergiocruz.me/unit-test-sailsjs-with-mocha-and-instanbul-for-code-coverage/" class="btn btn-transparent-gray" target="_blank">Check it out</a></p>
-        </section>
-      </div>
-
-    </div>
+          <section>
+            <h3>SailsJS Testing</h3>
+            <p>Unit testing SailsJS for the first time was not easy, so I wrote up a tutorial on it.</p>
+            <p><a href="https://blog.sergiocruz.me/unit-test-sailsjs-with-mocha-and-instanbul-for-code-coverage/" class="btn btn-transparent-gray" target="_blank">Check it out</a></p>
+          </section>
+        </div>
+      </div><!-- ./container -->
+    </section>
 
 
 
@@ -153,6 +225,8 @@
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-scroll/angular-scroll.min.js"></script>
+    <script src="bower_components/ng-parallax/angular-parallax.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -163,6 +237,7 @@
     <script src="scripts/directives/scvideo.js"></script>
     <script src="scripts/services/browserchecker.js"></script>
     <script src="scripts/directives/scroll-to.js"></script>
+    <script src="scripts/directives/rating.js"></script>
     <!-- endbuild -->
 </body>
 </html>

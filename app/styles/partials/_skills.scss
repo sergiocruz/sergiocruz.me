@@ -1,0 +1,98 @@
+.skills {
+  min-height: 800px;
+  color: white;
+  position: relative;
+
+  // Dark shadow
+  &:after {
+    background-color: rgba(0, 0, 0, .8);
+    content: ' ';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  // Polyfilling parallax in mobile (since image is hidden)
+  @media screen and (max-width: $screen-xs-max) {
+    background-image: url(../images/bg-skills.jpg);
+    background-size: auto 100%;
+    background-position: 50% 0;
+
+    > img {
+      display: none;
+    }
+  }
+
+  // Parallax image on tablets and up
+  @media screen and (min-width: $screen-sm-min) {
+    overflow: hidden;
+
+    > img {
+      bottom: 0;
+      height: auto;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+    }
+  }
+
+  > .container {
+    padding-top: 25px;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.position {
+  font-size: $font-size-small;
+  margin: 0 0 50px;
+
+  small {
+    color: white;
+    font-style: italic;
+
+    @media screen and (max-width: $screen-xs-max) {
+      display: block;
+    }
+
+    @media screen and (min-width: $screen-sm-min) {
+      float: right;
+      margin-left: 20px;
+    }
+  }
+}
+
+.experience {
+  @extend .col-sm-6;
+}
+
+.ratings {
+  @extend .col-sm-offset-2;
+  @extend .col-sm-4;
+
+  dl {
+    @extend .dl-horizontal;
+    margin-bottom: 40px;
+  }
+
+  dt {
+    font-weight: 300;
+  }
+
+  dd {
+    height: 15px;
+    margin-bottom: 10px;
+    position: relative;
+    top: 4px;
+    width: 100px;
+  }
+
+  h4 {
+    text-align: center;
+  }
+}

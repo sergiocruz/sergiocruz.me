@@ -1,0 +1,35 @@
+.btn-transparent-white {
+  @include button-variant(white, transparent, white);
+
+  &:hover {
+    background-color: white;
+    color: $gray-darker;
+  }
+}
+
+.btn-transparent-gray {
+  @include button-variant($gray-dark, transparent, $gray-dark);
+
+  &:hover {
+    background-color: $gray-dark;
+    color: white;
+  }
+}
+
+.btn-transparent-lime {
+  @include button-variant(white, transparent, $lime-green);
+
+  &:hover {
+    background-color: $lime-green;
+    color: $gray-dark;
+  }
+}
+
+.btn-link-lime {
+  background-color: $lime-green;
+  color: $gray-darker;
+
+  &:hover {
+    color: inherit;
+  }
+}

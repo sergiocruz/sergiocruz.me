@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * Google Font
  */
@@ -10,13 +11,15 @@
 // Colors
 $lime-green: #c6ff00;
 $gold-yellow: #ffc107;
+$pink: #e91e63;
+$baby-blue: #00b8d4;
 
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 $brand-primary: $lime-green;
-$brand-success: #e91e63;
+$brand-success: $pink;
 $font-family-sans-serif: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $font-size-base: 16px;
-$footer-bg: #00b8d4;
+$footer-bg: $baby-blue;
 $button-hover-speed: 250ms;
 
 $tooltip-color: #333;
@@ -37,61 +40,22 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
  * Mixins
  */
 @import "partials/mixins";
+@import "partials/angular";
+@import "partials/buttons";
 
 /**
  * Styles
  */
 
-.btn-transparent-white {
-  @include button-variant(white, transparent, white);
-
-  &:hover {
-    background-color: white;
-    color: $gray-darker;
-  }
-}
-
-.btn-transparent-gray {
-  @include button-variant($gray-dark, transparent, $gray-dark);
-
-  &:hover {
-    background-color: $gray-dark;
-    color: white;
-  }
-}
-
-.btn-transparent-lime {
-  @include button-variant(white, transparent, $lime-green);
-
-  &:hover {
-    background-color: $lime-green;
-    color: $gray-dark;
-  }
-}
-
-.btn-link-lime {
-  background-color: $lime-green;
-  color: $gray-darker;
-
-  &:hover {
-    color: inherit;
-  }
-}
-
 * {
   outline: none !important;
 
   @include selection {
-    background: $lime-green;
-    color: $gray-dark;
+    // background: $lime-green;
+    background: $baby-blue;
+    color: white;
   }
 }
-
-// .content {
-//   @media and (min-width: 1460px) {
-//     width: 1400px;
-//   }
-// }
 
 
 body, html {
@@ -124,7 +88,7 @@ a {
   @include transition($button-hover-speed);
 }
 
-h2 {
+.half-border {
   margin: 15px auto 25px;
   position: relative;
   padding: 0 0 20px 0;
@@ -144,17 +108,31 @@ h2 {
 }
 
 .standout {
-  text-align: center;
   background: $brand-success;
   color: white;
-  padding: 15px;
-  margin: 15px 0 20px;
-  font-weight: 100;
   font-size: 42px;
+  font-weight: 100;
+  margin: 15px 0 20px;
+  padding: 15px;
+  text-align: center;
 
   @media screen and (min-width: $screen-sm-min) {
-    width: 85%;
     padding-left: 15%;
+    width: 85%;
+  }
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+
+  &:after {
+    background: $brand-primary;
+    content: ' ';
+    display: block;
+    height: 3px;
+    margin: 10px auto;
+    width: 200px;
   }
 }
 
@@ -217,166 +195,7 @@ footer {
   }
 }
 
-/* Main marketing message and sign up button */
-header {
-  @extend .jumbotron;
-
-  background-color: #000;
-  border-bottom: 1px solid #e5e5e5;
-  color: white;
-  cursor: default;
-  height: 101%;
-  margin: 0 0 50px 0;
-  min-height: 600px;
-  overflow: hidden;
-  padding: 180px 0 0;
-  position: relative;
-  text-align: center;
-  @include disable-selection();
-
-  @media screen and (max-width: $screen-xs-max) {
-    border-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 25px;
-    padding-bottom: 10px;
-  }
-
-  > .line {
-    position: absolute;
-    width: 80%;
-    // max-width: 1200px;
-    height: 3px;
-    background: $lime-green;
-    top: 10px;
-    right: 0;
-  }
-
-  > .bg {
-    background-image: url(../images/bg-serg.jpg);
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    @include opaque(0.3);
-
-    // Can old IE get some love?
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/bg-serg.jpg', sizingMethod='scale');
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/bg-serg.jpg', sizingMethod='scale') progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
-
-    > video {
-      position: relative;
-      top: 0;
-      left: 0;
-      min-width: 100%;
-      min-height: 100%;
-      width: auto;
-      height: auto;
-      @extend .hidden-xs;
-    }
-  }
-
-  > .content {
-    position: relative;
-    z-index: 2;
-  }
-
-  h1 {
-    border: 4px solid $lime-green;
-    border-radius: $border-radius-large;
-    font-size: 60px;
-    line-height: normal;
-    margin: 10px auto 30px;
-    padding: 30px;
-    text-transform: uppercase;
-    width: 500px;
-    @include transition(500ms);
-
-    @media screen and (max-width: $screen-xs-max) {
-      font-size: 48px;
-      padding: 20px;
-      width: 260px;
-    }
-
-    small {
-      color: $gray-lighter;
-      display: block;
-      font-size: 35%;
-      font-weight: 100;
-      line-height: normal;
-
-      @media screen and (max-width: $screen-xs-max) {
-        margin-top: 10px;
-        font-size: 40%;
-        font-weight: 300;
-      }
-    }
-  }
-
-  .avatar {
-    background-image: url(../images/sergiocruz.png);
-    background-size: 240px 240px;
-    display: inline-block;
-    height: 240px;
-    width: 240px;
-
-    @media screen and (max-width: $screen-xs-max) {
-      background-size: 120px 120px;
-      height: 120px;
-      width: 120px;
-    }
-  }
-
-  .go-down {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    margin-left: -40px;
-    z-index: 3;
-  }
-}
-
-
-.intro {
-  margin-bottom: 40px;
-
-  .row {
-    max-width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  aside {
-    @extend .col-sm-4;
-    @include disable-selection;
-
-    img {
-      display: block;
-      height: auto;
-      margin: 0 auto;
-      max-width: 480px;
-      width: 100%;
-
-      @media screen and (min-width: $screen-sm-min) {
-        margin-top: -100px;
-      }
-    }
-  }
-
-  section {
-    @extend .col-sm-8;
-
-    p {
-      @extend .lead;
-    }
-  }
-
-  a {
-    @extend .btn-link-lime;
-  }
-}
+// Partials
+@import "partials/header";
+@import "partials/intro";
+@import "partials/skills";
