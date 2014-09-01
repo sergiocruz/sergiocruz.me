@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="ngApp" ng-controller="MainCtrl as m">
+  <body ng-app="ngApp" ng-controller="MainCtrl as m" class="ng-cloak">
 
     <header>
 
@@ -94,7 +94,7 @@
 
             <div class="position">
               <h4>GotChosen, Inc <small>July 2014 - Present</small></h4>
-              <div class="description" accordion-collapsible title="Senior UX Engineer" show="true">
+              <div class="description" accordion-collapsible accordion-title="Senior UX Engineer" accordion-show="true">
                 <ul>
                   <li>Developed large-scale JavaScript application using AngularJS</li>
                   <li>Used Node.js solutions for development workflow using Yeoman, Grunt &amp; Bower</li>
@@ -106,7 +106,7 @@
 
             <div class="position">
               <h4>TravelClick <small>February 2014 - July 2014 (Contract)</small></h4>
-              <div class="description" accordion-collapsible title="Application Developer" show="true">
+              <div class="description" accordion-collapsible accordion-title="Application Developer" accordion-show="true">
                 <ul>
                   <li>Comfortable in a team environment</li>
                   <li>Created User Interfaces from strict requirements with Yeoman, AngularJS and Semantic UI</li>
@@ -119,7 +119,7 @@
 
             <div class="position">
               <h4>GIVTED <small>November 2012 - February 2014</small></h4>
-              <div class="description" accordion-collapsible title="Product engineer">
+              <div class="description" accordion-collapsible accordion-title="Product engineer" accordion-show="true">
                 <ul>
                   <li>Full stack developer, primarily used Zend Framework &amp; AngularJS</li>
                   <li>Managed A/B and user research tests in order to optimize UI/UX, resulting in increased conversions</li>
@@ -132,7 +132,7 @@
 
             <div class="position">
               <h4>RGI Marketing <small>November 2011 – November 2012</small></h4>
-              <div class="description" accordion-collapsible title="Web &amp; Mobile Developer">
+              <div class="description" accordion-collapsible accordion-title="Web &amp; Mobile Developer">
                 <ul>
                   <li>Assisted with point-based ecommerce websites and phone apps (~30,000 active daily users)</li>
                   <li>Created inventory system that sent orders to our warehouse to optmize fullfiment time</li>
@@ -143,11 +143,10 @@
 
             <div class="position">
               <h4>eReady Websites <small>July 2010 – November 2011</small></h4>
-              <div class="description" accordion-collapsible title="Full Stack LAMP Developer">
+              <div class="description" accordion-collapsible accordion-title="Full Stack LAMP Developer">
                 <ul>
                   <li>Developed websites using ModX, Drupal and Wordpress</li>
-                  <li>Developed marketing system that generated thousands of leads using multiple top-level domain names
-to generate thousands of websites with many different themes, uncountable numbers of pages; which were based on synonym spun articles, geo-location, etc. This SEO system was built with the LAMP Stack, serving dynamic top-level domain names. We also experimented with many different forms of caching including APC, MongoDB, Redis, Memcached, and even flat files</li>
+                  <li>Developed marketing system that generated thousands of leads using multiple top-level domain names to generate thousands of websites with many different themes, uncountable numbers of pages; which were based on synonym spun articles, geo-location, etc. This SEO system was built with the LAMP Stack, serving dynamic top-level domain names. We also experimented with many different forms of caching including APC, MongoDB, Redis, Memcached, and even flat files</li>
                   <li>Built CRM system that enabled the sales team to manage the leads that were captured from the SEO system, with features such as e-mail auto-responders, call back and events alerts, lead-capturing reports, graphs, etc.</li>
                 </ul>
               </div>
@@ -155,7 +154,7 @@ to generate thousands of websites with many different themes, uncountable number
 
             <div class="position">
               <h4>Blue Palm Hotel <small>May 2009 – July 2010</small></h4>
-              <div class="description" accordion-collapsible title="Full Stack LAMP Developer">
+              <div class="description" accordion-collapsible accordion-title="Full Stack LAMP Developer">
                 <p>The Blue Palm Hotel used to be a Travelodge franchise, however they decided to try things on their own because of the many limitations they had when working with the franchise. That was when I joined them to manage their web presence.</p>
                 <ul>
                   <li>Developed a web-based reservation system that worked in 4 different languages: English, Spanish, Portuguese and French</li>
@@ -168,16 +167,14 @@ to generate thousands of websites with many different themes, uncountable number
 
             <div class="position">
               <h4>Blue Palm Hotel <small>December 2007 – May 2009</small></h4>
-              <div class="description" accordion-collapsible title="Freelance developer and IT Consultant">
-                <p>
-                  Assisted many businesses around the Central Florida area by developing websites and web-apps, designing flyers, posters and business cards, managing Windows networks and repairing computers and laptops. Software used: Adobe Creative Suite (Photoshop, Fireworks, Illustrator, Dreamweaver and Flash), Corel Draw, NuSphere PhpED.
-                </p>
+              <div class="description" accordion-collapsible accordion-title="Freelance developer and IT Consultant">
+                <p>Assisted many businesses around the Central Florida area by developing websites and web-apps, designing flyers, posters and business cards, managing Windows networks and repairing computers and laptops. Software used: Adobe Creative Suite (Photoshop, Fireworks, Illustrator, Dreamweaver and Flash), Corel Draw, NuSphere PhpED.</p>
               </div>
             </div>
 
             <div class="position">
               <h4>Brazilian National Biodiesel Magazine <small>July 2006 – December 2007</small></h4>
-              <div class="description" accordion-collapsible title="Full Stack LAMP Developer">
+              <div class="description" accordion-collapsible accordion-title="Full Stack LAMP Developer">
                 <ul>
                   <li>Responsible the magazine’s complete web presence by developing and maintaining their website, ecommerce store, e-mail newsletters and SEO.</li>
                   <li>Website included a custom CMS that enabled magazine writers to post articles directly into the website. CMS, ecommerce store, and newsletter manager were all built from the ground up using PHP and MySQL.</li>
@@ -253,8 +250,6 @@ to generate thousands of websites with many different themes, uncountable number
       </div><!-- ./container -->
     </section>
 
-
-
     <footer>
       <p class="social-media">
         <a href="https://twitter.com/hashtagserg" target="_blank" title="Twitter" tooltip><i class="fa fa-twitter"></i></a>
@@ -265,7 +260,6 @@ to generate thousands of websites with many different themes, uncountable number
       </p>
     </footer>
 
-
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -275,6 +269,21 @@ to generate thousands of websites with many different themes, uncountable number
       ga('create', 'UA-24173653-6', 'auto');
       ga('send', 'pageview');
     </script>
+
+    <!-- Begin Inspectlet Embed Code -->
+    <script type="text/javascript" id="inspectletjs">
+      window.__insp = window.__insp || [];
+      __insp.push(['wid', 1621581346]);
+      (function() {
+        function __ldinsp(){var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); }
+        if (window.attachEvent){
+          window.attachEvent('onload', __ldinsp);
+        }else{
+          window.addEventListener('load', __ldinsp, false);
+        }
+      })();
+    </script>
+    <!-- End Inspectlet Embed Code -->
 
     <!-- build:js(.) scripts/oldieshim.js -->
     <!--[if lt IE 9]>

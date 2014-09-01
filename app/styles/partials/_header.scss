@@ -7,9 +7,7 @@ header {
   cursor: default;
   height: 101%;
   margin: 0 0 50px 0;
-  min-height: 600px;
   overflow: hidden;
-  padding: 180px 0 0;
   position: relative;
   text-align: center;
   @include disable-selection();
@@ -20,6 +18,16 @@ header {
     padding-right: 0;
     padding-top: 25px;
     padding-bottom: 10px;
+  }
+
+  @media screen and (min-width: $screen-sm-min) {
+    min-height: 500px;
+    padding-top: 80px;
+  }
+
+  @media screen and (min-width: $screen-lg-min) {
+    min-height: 600px;
+    padding-top: 180px;
   }
 
   > .line {
@@ -58,6 +66,10 @@ header {
       width: auto;
       height: auto;
       @extend .hidden-xs;
+
+      .is-touch & {
+        display: none;
+      }
     }
   }
 

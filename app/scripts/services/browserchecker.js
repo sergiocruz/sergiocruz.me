@@ -8,7 +8,7 @@
  * Factory in the ngApp.
  */
 angular.module('ngApp')
-  .factory('BrowserChecker', function BrowserChecker() {
+  .factory('BrowserChecker', ['$window', function BrowserChecker($window) {
 
     /**
      * Determines if browser is mobile
@@ -33,6 +33,9 @@ angular.module('ngApp')
       return Modernizr.touch;
     }
 
+    // Adding 'is-touch' class to body
+    angular.element($window.document.body).addClass( isTouch() ? 'is-touch' : 'is-not-touch' );
+
     /**
      * Public methods
      */
@@ -40,4 +43,4 @@ angular.module('ngApp')
       isMobile: isMobile,
       isTouch: isTouch
     };
-  });
+  }]);

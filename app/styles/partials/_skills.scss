@@ -5,18 +5,18 @@
 
   // Dark shadow
   &:after {
-    background-color: rgba(0, 0, 0, .85);
+    background-color: rgba(0, 0, 0, .8);
+    bottom: 0;
     content: ' ';
-    position: absolute;
     left: 0;
     right: 0;
+    position: absolute;
     top: 0;
-    bottom: 0;
     z-index: 1;
   }
 
   // Polyfilling parallax in mobile (since image is hidden)
-  @media screen and (max-width: $screen-xs-max) {
+  .is-touch & {
     background-image: url(../images/bg-skills.jpg);
     background-size: auto 100%;
     background-position: 50% 0;
@@ -27,7 +27,7 @@
   }
 
   // Parallax image on tablets and up
-  @media screen and (min-width: $screen-sm-min) {
+  .is-not-touch & {
     overflow: hidden;
 
     > img {
@@ -64,6 +64,7 @@
   }
 
   a {
+    color: $brand-primary;
     text-decoration: none;
 
     &:hover {
@@ -79,22 +80,17 @@
       color: $gray-light;
       margin-left: 10px;
     }
-
-    .fa, span {
-      display: inline-block;
-      vertical-align: middle;
-    }
   }
 
   small {
     color: white;
     font-style: italic;
 
-    @media screen and (max-width: $screen-xs-max) {
+    @media screen and (max-width: $screen-sm-max) {
       display: block;
     }
 
-    @media screen and (min-width: $screen-sm-min) {
+    @media screen and (min-width: $screen-md-min) {
       float: right;
       margin-left: 20px;
     }
@@ -108,11 +104,13 @@
 
 .experience {
   @extend .col-sm-7;
+  @extend .col-md-7;
 }
 
 .ratings {
-  @extend .col-sm-offset-1;
-  @extend .col-sm-4;
+  @extend .col-sm-5;
+  @extend .col-md-offset-1;
+  @extend .col-md-4;
 
   dl {
     @extend .dl-horizontal;
@@ -143,8 +141,9 @@
   }
 
   dt {
-    font-weight: 300;
     color: $gray-light;
+    cursor: default;
+    font-weight: 300;
   }
 
   dd {

@@ -67,6 +67,11 @@ body, html {
   text-rendering: optimizelegibility;
   -moz-osx-font-smoothing: grayscale;
   padding: 0;
+
+  &.ng-cloak {
+    display: none;
+    background: black;
+  }
 }
 
 h1, h2, h3 {

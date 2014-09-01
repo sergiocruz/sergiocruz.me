@@ -36,8 +36,8 @@
         restrict: 'EA',
         transclude: true,
         scope: {
-          title: '@',
-          show: '@'
+          title: '@accordionTitle',
+          show: '@accordionShow'
         },
         controller: ['$scope', controller],
         controllerAs: 'accordion',
