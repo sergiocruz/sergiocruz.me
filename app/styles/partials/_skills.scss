@@ -1,6 +1,6 @@
 .skills {
-  min-height: 800px;
   color: white;
+  min-height: 800px;
   position: relative;
 
   // Dark shadow
@@ -49,8 +49,10 @@
 }
 
 .position {
+  border-bottom: 1px dotted #333;
   font-size: $font-size-small;
-  margin: 0 0 50px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
 
   h4 {
     color: $brand-success;
@@ -59,6 +61,29 @@
 
   h5 {
     color: $gray-light;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      color: white;
+    }
+
+    .fa {
+      font-size: 20px;
+      @include transition(800ms);
+    }
+
+    span {
+      color: $gray-light;
+      margin-left: 10px;
+    }
+
+    .fa, span {
+      display: inline-block;
+      vertical-align: middle;
+    }
   }
 
   small {
@@ -77,6 +102,7 @@
 
   .description {
     line-height: 170%;
+    margin-bottom: 10px;
   }
 }
 
@@ -87,8 +113,6 @@
 .ratings {
   @extend .col-sm-offset-1;
   @extend .col-sm-4;
-
-
 
   dl {
     @extend .dl-horizontal;

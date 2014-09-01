@@ -1,0 +1,7 @@
+<h5>
+  <a href class="fa" ng-class="{'fa-plus-square': !show, 'fa-minus-square': show}" ng-click="accordion.toggleShow()">
+    <span ng-bind="title"></span>
+  </a>
+</h5>
+
+<div ng-show="show" ng-transclude></div>
