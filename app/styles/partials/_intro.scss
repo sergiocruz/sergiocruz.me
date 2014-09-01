@@ -1,0 +1,38 @@
+.intro {
+  margin-bottom: 40px;
+
+  a {
+    @extend .btn-link-lime;
+  }
+
+  .row {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+
+    > aside {
+      @extend .col-sm-4;
+      @include disable-selection;
+
+      img {
+        display: block;
+        height: auto;
+        margin: 0 auto;
+        max-width: 480px;
+        width: 100%;
+
+        @media screen and (min-width: $screen-md-min) {
+          margin-top: -100px;
+        }
+      }
+    }
+
+    > div {
+      @extend .col-sm-8;
+
+      p {
+        @extend .lead;
+      }
+    }
+  }
+}

@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="ngApp">
+  <body ng-app="ngApp" ng-controller="MainCtrl as m" class="ng-cloak">
 
     <header>
 
@@ -54,63 +54,201 @@
       <a href class="go-down" scroll-to scroll-to-target="#nice-to-meet-you"></a>
     </header>
 
-    <article class="intro">
-      <h2 id="nice-to-meet-you">Hello I'm Sergio, nice to meet you!</h2>
+    <section class="intro">
+      <article>
+        <h2 class="half-border" id="nice-to-meet-you">Hello I'm Sergio, nice to meet you!</h2>
 
-      <div class="row">
-        <aside>
-          <img src="images/serg-profile.png" alt="Sergio Cruz, application developer" class="img-rounded" width="100" height="100">
-        </aside>
-        <section>
-          <p>Thanks for dropping by! I am a software developer who enjoys building meaningful products with powerful cutting edge technologies. I specially love creating user interfaces with optimized user experience (UI/UX) by developing complex client-side applications.</p>
-          <p>
-            My favorite tech stack at the moment includes:
-            <a href="http://yeoman.io/" target="_blank">yeoman</a>,
-            <a href="https://angularjs.org/" target="_blank">angularjs</a>,
-            <a href="http://sass-lang.com/" target="_blank">SASS</a>,
-            <a href="http://sailsjs.org/">sailsjs</a>,
-            <a href="http://www.mongodb.org/" target="_blank">mongo</a> &amp;
-            <a href="http://jasmine.github.io/edge/introduction.html" target="_blank">jasmine</a>.
-            Before JavaScript won me over though, I used to live in the PHP world (I still go back to visit sometimes). Ah the good times I've had with CodeIgniter, Zend, Laravel...
-          </p>
-          <p>
-            Feel free to contact me at any time with questions:<br >
-            <strong>E.</strong> hello [at] sergiocruz.me<br />
-            <strong>P.</strong> (407) six-nine-four 8175
-          </p>
-        </section>
+        <div class="row">
+          <aside>
+            <img src="images/serg-profile.png" alt="Sergio Cruz, application developer" class="img-rounded" width="100" height="100">
+          </aside>
+          <div>
+            <p>Thanks for dropping by! I am a software developer who enjoys building meaningful products with powerful cutting edge technologies. I specially love creating user interfaces with optimized user experience (UI/UX) by developing complex client-side applications.</p>
+            <p>
+              My favorite tech stack at the moment includes:
+              <a href="http://yeoman.io/" target="_blank">yeoman</a>,
+              <a href="https://angularjs.org/" target="_blank">angularjs</a>,
+              <a href="http://sass-lang.com/" target="_blank">SASS</a>,
+              <a href="http://sailsjs.org/">sailsjs</a>,
+              <a href="http://www.mongodb.org/" target="_blank">mongo</a> &amp;
+              <a href="http://jasmine.github.io/edge/introduction.html" target="_blank">jasmine</a>.
+              Before JavaScript won me over though, I used to live in the PHP world (I still go back to visit sometimes). Ah the good times I've had with CodeIgniter, Zend, Laravel...
+            </p>
+            <p>
+              Feel free to contact me at any time with questions:<br >
+              <strong>E.</strong> hello [at] sergiocruz.me<br />
+              <strong>P.</strong> (407) six-nine-four 8175
+            </p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="skills">
+      <img src="images/bg-skills.jpg" alt="" du-parallax y="m.background" opacity="fadeIn" />
+      <div class="container">
+
+        <div class="row">
+          <div class="experience">
+            <h3 class="section-title">Work Experience</h3>
+
+            <div class="position">
+              <h4>GotChosen, Inc <small>July 2014 - Present</small></h4>
+              <div class="description" accordion-collapsible accordion-title="Senior UX Engineer" accordion-show="true">
+                <ul>
+                  <li>Developed large-scale JavaScript application using AngularJS</li>
+                  <li>Used Node.js solutions for development workflow using Yeoman, Grunt &amp; Bower</li>
+                  <li>Assisted API Team to come up with good RESTful standards</li>
+                  <li>Integrated application with proprietary RESTful API</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="position">
+              <h4>TravelClick <small>February 2014 - July 2014 (Contract)</small></h4>
+              <div class="description" accordion-collapsible accordion-title="Application Developer" accordion-show="true">
+                <ul>
+                  <li>Comfortable in a team environment</li>
+                  <li>Created User Interfaces from strict requirements with Yeoman, AngularJS and Semantic UI</li>
+                  <li>Hybrid phone applications using Ionic Framework</li>
+                  <li>Extended existing proprietary PHP framework to support Restful APIs</li>
+                  <li>Unit tested PHP and JavaScript code</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="position">
+              <h4>GIVTED <small>November 2012 - February 2014</small></h4>
+              <div class="description" accordion-collapsible accordion-title="Product engineer" accordion-show="true">
+                <ul>
+                  <li>Full stack developer, primarily used Zend Framework &amp; AngularJS</li>
+                  <li>Managed A/B and user research tests in order to optimize UI/UX, resulting in increased conversions</li>
+                  <li>Managed design contests involving more than 30 designers at a time.</li>
+                  <li>Implemented new workflow processes including GruntJS, SASS</li>
+                  <li>Responsive design slicing with strict cross browser compatibility requirements (>IE8)</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="position">
+              <h4>RGI Marketing <small>November 2011 – November 2012</small></h4>
+              <div class="description" accordion-collapsible accordion-title="Web &amp; Mobile Developer">
+                <ul>
+                  <li>Assisted with point-based ecommerce websites and phone apps (~30,000 active daily users)</li>
+                  <li>Created inventory system that sent orders to our warehouse to optmize fullfiment time</li>
+                  <li>Technologies included: Codeigniter, RESTful APIs, and the Android SDK</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="position">
+              <h4>eReady Websites <small>July 2010 – November 2011</small></h4>
+              <div class="description" accordion-collapsible accordion-title="Full Stack LAMP Developer">
+                <ul>
+                  <li>Developed websites using ModX, Drupal and Wordpress</li>
+                  <li>Developed marketing system that generated thousands of leads using multiple top-level domain names to generate thousands of websites with many different themes, uncountable numbers of pages; which were based on synonym spun articles, geo-location, etc. This SEO system was built with the LAMP Stack, serving dynamic top-level domain names. We also experimented with many different forms of caching including APC, MongoDB, Redis, Memcached, and even flat files</li>
+                  <li>Built CRM system that enabled the sales team to manage the leads that were captured from the SEO system, with features such as e-mail auto-responders, call back and events alerts, lead-capturing reports, graphs, etc.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="position">
+              <h4>Blue Palm Hotel <small>May 2009 – July 2010</small></h4>
+              <div class="description" accordion-collapsible accordion-title="Full Stack LAMP Developer">
+                <p>The Blue Palm Hotel used to be a Travelodge franchise, however they decided to try things on their own because of the many limitations they had when working with the franchise. That was when I joined them to manage their web presence.</p>
+                <ul>
+                  <li>Developed a web-based reservation system that worked in 4 different languages: English, Spanish, Portuguese and French</li>
+                  <li>The reservation system included an administration panel that enabled hotel administrators to tweak room prices as needed throughout the year</li>
+                  <li>They were also able to manage the reservations that came in, and to generate reports to control what marketing campaigns worked best</li>
+                  <li>The whole package was built using PHP and MySQL as the backend engine, and (x)HTML, CSS and Javascript on the frontend</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="position">
+              <h4>Blue Palm Hotel <small>December 2007 – May 2009</small></h4>
+              <div class="description" accordion-collapsible accordion-title="Freelance developer and IT Consultant">
+                <p>Assisted many businesses around the Central Florida area by developing websites and web-apps, designing flyers, posters and business cards, managing Windows networks and repairing computers and laptops. Software used: Adobe Creative Suite (Photoshop, Fireworks, Illustrator, Dreamweaver and Flash), Corel Draw, NuSphere PhpED.</p>
+              </div>
+            </div>
+
+            <div class="position">
+              <h4>Brazilian National Biodiesel Magazine <small>July 2006 – December 2007</small></h4>
+              <div class="description" accordion-collapsible accordion-title="Full Stack LAMP Developer">
+                <ul>
+                  <li>Responsible the magazine’s complete web presence by developing and maintaining their website, ecommerce store, e-mail newsletters and SEO.</li>
+                  <li>Website included a custom CMS that enabled magazine writers to post articles directly into the website. CMS, ecommerce store, and newsletter manager were all built from the ground up using PHP and MySQL.</li>
+                </ul>
+              </div>
+            </div>
+          </div><!-- /.experience -->
+
+          <div class="ratings">
+            <h3 class="section-title">Technical Skills</h3>
+            <h4>Languages &amp; DBs</h4>
+            <dl>
+              <dt>JavaScript</dt><dd rating="85"></dd>
+              <dt>PHP</dt><dd rating="80"></dd>
+              <dt>Java</dt><dd rating="60"></dd>
+              <dt>MySQL</dt><dd rating="70"></dd>
+              <dt>MongoDB</dt><dd rating="60"></dd>
+              <dt>HTML(5)</dt><dd rating="90"></dd>
+              <dt>CSS(3)</dt><dd rating="85"></dd>
+            </dl>
+
+            <h4>Frameworks &amp; Platforms</h4>
+            <dl>
+              <dt>NodeJS</dt><dd rating="70"></dd>
+              <dt>AngularJS</dt><dd rating="80"></dd>
+              <dt>SailsJS</dt><dd rating="90"></dd>
+              <dt>Laravel</dt><dd rating="60"></dd>
+              <dt>Grunt</dt><dd rating="85"></dd>
+              <dt>CodeIgniter</dt><dd rating="95"></dd>
+              <dt>SASS / LESS</dt><dd rating="80"></dd>
+            </dl>
+
+            <h4>Development Software</h4>
+            <dl>
+              <dt>OS X</dt><dd rating="85"></dd>
+              <dt>Ubuntu</dt><dd rating="65"></dd>
+              <dt>Adobe Photoshop</dt><dd rating="65"></dd>
+              <dt>Adobe Fireworks</dt><dd rating="90"></dd>
+              <dt>Sublime Text</dt><dd rating="90"></dd>
+              <dt>Xcode</dt><dd rating="60"></dd>
+              <dt>Eclipse</dt><dd rating="75"></dd>
+              <dt>Vim</dt><dd rating="55"></dd>
+            </dl>
+          </div><!-- ./ratings -->
+        </div>
       </div>
-    </article>
+    </section>
 
-    <h3 class="standout">Current projects</h3>
+    <section class="projects">
+      <h3 class="standout">Current projects</h3>
+      <div class="container">
+        <p class="lead">Come back soon to see some projects I'm working on, portfolio, résumé and rants! Until then, checkout some links:</p>
 
-    <div class="container">
+        <div class="articles">
+          <section>
+            <h3>Coffee Finder</h3>
+            <p>Pebble watchface app, shows you closest coffee shop to your current location.</p>
+            <p><a href="https://apps.getpebble.com/applications/53b0d17bb9bff87a3e000077" class="btn btn-transparent-gray" target="_blank">Check it out</a></p>
+          </section>
 
-      <p class="lead">Come back soon to see some projects I'm working on, portfolio, résumé and rants! Until then, checkout some links:</p>
+          <section>
+            <h3>AngularJS Testing</h3>
+            <p>Blog post describing how to unit test and generate code coverage in AngularJS.</p>
+            <p><a href="https://blog.sergiocruz.me/angularjs-how-to-generate-code-coverage-for-yeoman-scaffolded-apps/" class="btn btn-transparent-gray" target="_blank">Check it out</a></p>
+          </section>
 
-      <div class="articles">
-        <section>
-          <h3>Coffee Finder</h3>
-          <p>Pebble watchface app, shows you closest coffee shop to your current location.</p>
-          <p><a href="https://apps.getpebble.com/applications/53b0d17bb9bff87a3e000077" class="btn btn-transparent-gray" target="_blank">Check it out</a></p>
-        </section>
-
-        <section>
-          <h3>AngularJS Testing</h3>
-          <p>Blog post describing how to unit test and generate code coverage in AngularJS.</p>
-          <p><a href="https://blog.sergiocruz.me/angularjs-how-to-generate-code-coverage-for-yeoman-scaffolded-apps/" class="btn btn-transparent-gray" target="_blank">Check it out</a></p>
-        </section>
-
-        <section>
-          <h3>SailsJS Testing</h3>
-          <p>Unit testing SailsJS for the first time was not easy, so I wrote up a tutorial on it.</p>
-          <p><a href="https://blog.sergiocruz.me/unit-test-sailsjs-with-mocha-and-instanbul-for-code-coverage/" class="btn btn-transparent-gray" target="_blank">Check it out</a></p>
-        </section>
-      </div>
-
-    </div>
-
-
+          <section>
+            <h3>SailsJS Testing</h3>
+            <p>Unit testing SailsJS for the first time was not easy, so I wrote up a tutorial on it.</p>
+            <p><a href="https://blog.sergiocruz.me/unit-test-sailsjs-with-mocha-and-instanbul-for-code-coverage/" class="btn btn-transparent-gray" target="_blank">Check it out</a></p>
+          </section>
+        </div>
+      </div><!-- ./container -->
+    </section>
 
     <footer>
       <p class="social-media">
@@ -122,7 +260,6 @@
       </p>
     </footer>
 
-
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -132,6 +269,21 @@
       ga('create', 'UA-24173653-6', 'auto');
       ga('send', 'pageview');
     </script>
+
+    <!-- Begin Inspectlet Embed Code -->
+    <script type="text/javascript" id="inspectletjs">
+      window.__insp = window.__insp || [];
+      __insp.push(['wid', 1621581346]);
+      (function() {
+        function __ldinsp(){var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); }
+        if (window.attachEvent){
+          window.attachEvent('onload', __ldinsp);
+        }else{
+          window.addEventListener('load', __ldinsp, false);
+        }
+      })();
+    </script>
+    <!-- End Inspectlet Embed Code -->
 
     <!-- build:js(.) scripts/oldieshim.js -->
     <!--[if lt IE 9]>
@@ -153,6 +305,8 @@
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-scroll/angular-scroll.min.js"></script>
+    <script src="bower_components/ng-parallax/angular-parallax.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -163,6 +317,8 @@
     <script src="scripts/directives/scvideo.js"></script>
     <script src="scripts/services/browserchecker.js"></script>
     <script src="scripts/directives/scroll-to.js"></script>
+    <script src="scripts/directives/rating.js"></script>
+    <script src="scripts/directives/accordion-collapsible.js"></script>
     <!-- endbuild -->
 </body>
 </html>
