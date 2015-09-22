@@ -29,9 +29,28 @@
 
     > div {
       @extend .col-sm-8;
+      @extend .lead;
 
-      p {
-        @extend .lead;
+      ol {
+        margin: 10px 0;
+        padding: 0;
+
+        > li {
+          list-style-position: inside;
+          list-style-type: decimal;
+          margin: 0;
+          padding: 0;
+
+          &:after {
+            content: ','
+          }
+
+          &:last-child {
+            &:after {
+              content: ''
+            }
+          }
+        }
       }
     }
   }
